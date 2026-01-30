@@ -13,16 +13,21 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">Yasmeena<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="logo">Yasmeena<span>.</span></div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
 
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#achievements" onclick="toggleMenu()">Achievements</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+    </nav>
+    
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text">
@@ -31,7 +36,6 @@
                 <p class="subtext">Student | Math Enthusiast | Scholarship Hunter | Future Scientist ✨</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn primary">Let's Talk</a>
-                    <a href="#projects" class="btn secondary">View Projects</a>
                 </div>
             </div>
             <div class="hero-img">
@@ -211,4 +215,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
