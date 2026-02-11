@@ -375,6 +375,49 @@ footer {
     .hero-btns {
         justify-content: center;
     }
+   /* Sembunyikan tombol hamburger secara default di Laptop */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Munculkan tombol garis tiga di HP */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Di bawah navbar */
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column; /* Menu jadi tumpuk ke bawah */
+        gap: 0;
+        max-height: 0; /* Sembunyikan menu */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+
+    /* Saat menu aktif (diklik) */
+    .nav-links.active {
+        max-height: 400px; /* Batas tinggi menu saat terbuka */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #f1f5f9;
+    }
+}
 }
 /* =========================
     5. CONTACT SECTION
@@ -585,4 +628,5 @@ footer {
     .about-grid {
         grid-template-columns: 1fr; /* Jadi satu baris kalau di HP */
     }
+
 }
